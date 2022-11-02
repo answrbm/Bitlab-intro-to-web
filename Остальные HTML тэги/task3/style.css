@@ -1,0 +1,90 @@
+.header {
+	text-align: center;
+}
+
+.greeting {
+	color:  white;
+	background: grey;
+	padding: 20px;
+}
+
+.top-menu {
+	padding: 10px;
+	margin: 10px 0;
+	color: white;
+	background-color: darkblue;
+	position: relative;
+}
+
+ul {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.right {
+	float: right;
+}
+
+li {
+	display: inline;
+	padding-right: 5px;
+}
+
+.items {
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+  	grid-gap: 100px;
+  	grid-auto-rows: minmax(100px, auto);
+  	text-align: center;
+}
+
+.items div {
+	border:1px solid lightgrey;
+}
+
+.items p {
+	font-weight: bold;
+	margin: 7%;
+	text-align: left;
+}
+
+.items .price {
+	font-size: 25px;
+}
+
+.items button {
+	float: left;
+	padding: 8px;
+	border-radius: 5%;
+	margin: 7%;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.footer p {
+	text-align: center;
+	color:  white;
+	background: darkslategrey;
+	padding: 20px;
+	margin-top: 30px;
+}
+
+a {
+	color: grey;
+	text-decoration: none;
+}
+
+.products {
+	color: darkblue;
+}
+
+button {
+	color: white;
+	background-color: blue;
+	border: none;
+}
