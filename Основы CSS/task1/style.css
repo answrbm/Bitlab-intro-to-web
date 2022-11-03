@@ -1,0 +1,170 @@
+body {
+	font-family:Calibri;
+}
+
+.header {
+	padding: 20px;
+	background-color: darkblue;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+}
+
+.header ul {
+	display: inline;
+	list-style: none;
+}
+
+.header li {
+	display: inline;
+}
+
+.header b {
+	font-size: 20px;
+	color: white;
+}
+
+.header .right {
+	float: right;
+	margin-right: 2%;
+}
+
+.header .right li {
+	margin: 7px;
+}
+
+.content-part {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content-part .left-part {
+	margin: 0 auto;
+	padding-top: 1.5%;
+}
+
+.content-part .left-part input {
+	height: 25px;
+	width: 200px;
+}
+
+.content-part .left-part button {
+	color: white;
+	background-color: green;
+	border: none;
+	height: 40px;
+	width: 80px;
+	border-radius: 9%;
+}
+
+.content-part .left-part a {
+	text-decoration: none;
+	color: darkblue;
+	font-weight: bold;
+}
+
+.content-part .left-part span {
+	font-size: 20px;
+	display: block;
+	margin-bottom: 7px;
+}
+
+.content-part .left-part .second-span, button {
+	margin-top: 12px;
+}
+
+.content-part .middle-part {
+	width: 50%;
+}
+
+.content-part .middle-part h2 {
+	color: darkblue;
+}
+
+.content-part .middle-part span {
+	font-weight: bold;
+}
+
+.content-part .middle-part p {
+	text-align: justify;
+}
+
+.content-part .right-part {
+	margin: auto;
+	padding-top: 1.5%;
+}
+
+.content-part .right-part * {
+	border: 1px solid white;
+}
+
+.content-part .right-part table * {
+	padding: 5px;
+}
+
+.content-part .right-part th {
+	color: white;
+	background-color: black;
+}
+
+.content-part .right-part tr:nth-child(1) {
+	color: white;
+	background-color: darkgreen;
+}
+
+.content-part .right-part *:nth-child(1) {
+	text-align: center;
+}
+
+.content-part .right-part tr:nth-child(2), tr:nth-child(3), tr:nth-child(4)  {
+	background-color: lightgreen;
+}
+
+.content-part .right-part tr:nth-child(n+5) {
+	background-color: lightgray;
+}
+
+.content-part .right-part tr:nth-child(n+18)  {
+	background-color: pink;
+}
+
+.content-part img {
+	width: 100%;
+	height: 150px;
+}
+
+/************************************/
+
+/*.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.xpandable-block {
+  height: 55px;
+  overflow: hidden;
+  order: 0;
+}
+.xpand-button {
+  order: 1;
+}
+
+.middle-part input[type="checkbox"] {
+ display: none;
+}
+.middle-part input[type="checkbox"]:checked + .xpandable-block {
+  height: auto;
+}
+.middle-part label {
+  order: 1;
+  color: blue;
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
+}*/
+
