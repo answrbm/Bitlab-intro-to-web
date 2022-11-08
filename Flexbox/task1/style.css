@@ -1,20 +1,35 @@
+body {
+	margin: auto;
+	width: 90%;
+	font-family: Arial;
+}
+
 /******************************************************/
 /*header*/
 
 .header ul {
+	margin-bottom: 1%;
+	padding: 1.5%;
 	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.header li {
-	display: inline;
+.header {
+	margin: 0;
+	padding: 0;
+	background-color: darkblue;
+	
 }
 
-.header li:nth-child(1) {
-	margin-right: 95%;
+.header a {
+	text-decoration: none;
+	color: white
 }
 
-.header li:nth-child(2) {
-	margin-left: 95%;
+.header .logo {
+	font-weight: bold;
 }
 
 /******************************************************/
@@ -28,16 +43,148 @@
 /*****************************/
 /*left*/
 
+.left {
+	width: 20%;
+}
+
+.left .edit-bt {
+	font-weight: bold;
+	text-decoration: none;
+	color: blue;
+}
+
+.left ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.left li {
+	width: 250px;
+	border: 1px solid lightgrey;
+}
+
 .left img {
-	height: 100px;
-	white-space: 50px;
+	width: 100%;
+}
+
+.left p {
+	text-align: center;
+}
+
+.left .pad-elem, .main-name {
+	padding: 8px 0 8px 8px;
+}
+
+.left .pad-elem a {
+	text-decoration: none;
+	color: black;
+}
+
+.left .main-name a {
+	color: blue;
+}
+
+.left .pad-elem a:hover {
+	color: blue;
+}
+
+.left .main-name a:hover {
+	color: purple;
 }
 
 /*****************************/
 /*middle*/
+/* .middle {
+	width: 100%;
+}
+
+.middle img {
+	height: 250px;
+	width: 100%;
+}
+
+.middle .news-item .user-name {
+	font-weight: bold;
+}
+
+.middle .news-item {
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 3%;
+}
+
+.middle .user-name {
+	padding-bottom:  1%;
+}
+
+.middle .news-content {
+	width: 90%;
+	margin-left: 4%;
+}
+
+.middle button {
+	color: white;
+	background-color: darkblue;
+	padding: 8px;
+	border: none;
+} */
+
+/* FRIENDS.HTML */
+/*****************************/
+/*middle-friends*/
+.middle-friends {
+	width: 100%;
+}
+
+.friends-item {
+	display: flex;
+}
+
+.friends-item img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+
+/*****************************/
 
 
 /*****************************/
 /*right*/
+
+.right {
+	width: 40%;
+}
+
+.right table {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid lightgrey; 
+	border-collapse: collapse; 
+}
+
+.right .t-elem {
+	border: 1px solid lightgrey;
+}
+
+.right td {
+	padding: 5px;
+}
+
+.right .time {
+	color: grey;
+	padding-left: 25px;
+}
+
+.right .description {
+	color: grey;
+}
+
+.right .bold-part {
+	font-weight: bold;
+}
 
 /******************************************************/
