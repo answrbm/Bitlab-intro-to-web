@@ -1,0 +1,43 @@
+/******************************************************/
+/*header*/
+
+.header ul {
+	list-style: none;
+}
+
+.header li {
+	display: inline;
+}
+
+.header li:nth-child(1) {
+	margin-right: 95%;
+}
+
+.header li:nth-child(2) {
+	margin-left: 95%;
+}
+
+/******************************************************/
+/*content*/
+
+.content {
+	display: flex;
+	justify-content: space-around;
+}
+
+/*****************************/
+/*left*/
+
+.left img {
+	height: 100px;
+	white-space: 50px;
+}
+
+/*****************************/
+/*middle*/
+
+
+/*****************************/
+/*right*/
+
+/******************************************************/
