@@ -65,6 +65,10 @@ body {
     text-align: left;
 }
 
+.menu-item {
+    width: 17%;
+}
+
 .menu ul {
     width: 100%;
     list-style: none;
@@ -75,6 +79,16 @@ body {
 .menu li {
     padding: 5px;
 }
+
+.menu a {
+    display: block;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: lightblue;
+}
+
 /************/
 
 /****PROFILE****/
@@ -253,4 +267,5 @@ body {
 
 /************/
 
-/**********************/
+
+
