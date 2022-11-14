@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let kztQuantity = prompt("INSERT YOUR AMOUNT IN KZT:");
+            let choice = prompt("1- CONVERT TO USD\n2- CONVERT TO EUR\n3- CONVERT TO GBP");
+            
+            if(choice == "1") alert(kztQuantity + " KZT = " + (parseFloat(kztQuantity) / parseFloat(380)).toFixed(2) + " USD");
+            if(choice == "2") alert(kztQuantity + " KZT = " + (parseFloat(kztQuantity) / parseFloat(430)).toFixed(2) + " EUR");
+            if(choice == "3") alert(kztQuantity + " KZT = " + (parseFloat(kztQuantity) / parseFloat(480)).toFixed(2) + " GBPS");
+
+        </script>
+    </body>
+</html> 
