@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let minutes = parseInt(prompt("Enter minutes:"));
+
+            let hours = minutes/60;
+
+            if(minutes % 60 != 0) {
+                let arr = hours.toFixed(2).toString().split(".");
+                if(arr[1] >= 60) {
+                    let subArr = (arr[1]/60).toFixed(2).toString().split(".");
+                    alert((parseFloat(arr[0]) + parseFloat(subArr[0])) + " hours and " + subArr[1] + " minutes");
+                } else {
+                    alert(arr[0] + " hours and " + arr[1] + " minutes");
+                }
+            } else {
+                alert("ONLY " + hours + " hours");
+            } 
+
+        </script>
+    </body>
+</html> 

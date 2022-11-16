@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let kzt = parseInt(prompt("Enter kzt:"));
+
+            let mainPart = kzt / 380;
+            let floatingPart = kzt % 380;
+
+            if(floatingPart > 0) alert(mainPart.toFixed(2).toString().split(".")[0] + " USD and " + mainPart.toFixed(2).toString().split(".")[1] + " cents");
+            else alert("ONLY " + mainPart + " USD");
+
+        </script>
+    </body>
+</html> 

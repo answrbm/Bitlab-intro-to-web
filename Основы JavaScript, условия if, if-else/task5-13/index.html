@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let choice1 = parseInt(prompt("Choose your branch:\n1 - Science, 2 - Humanitarian subjects, 3 - Art, 4 - Sport:"));
+
+            if(choice1 == 1) {
+                let choice2 = parseInt(prompt("1 - Math, 2 - Physics:"));
+                if(choice2 == 1) alert("You are Financier");
+                else if(choice2 == 2) alert("You are Engineer");
+            } else if(choice1 == 2) {
+                let choice2 = parseInt(prompt("1 - History, 2 - Foreign Languages:"));
+                if(choice2 == 1) alert("You are Historic or Diplomat  ");
+                else if(choice2 == 2) alert("You are Translator");
+            } else if(choice1 == 3) {
+                let choice2 = parseInt(prompt("1 - Drawing, 2 -Singing:"));
+                if(choice2 == 1) alert("You are Painter or Architect");
+                else if(choice2 == 2) alert("You are Singer or Tamada");
+            } else if(choice1 == 4) {
+                let choice2 = parseInt(prompt("1 - Team, 2 - Individual:"));
+                if(choice2 == 1) alert("You are footballer or Basketball player");
+                else if(choice2 == 2) alert("You are boxer or tennis player");
+            }
+
+        </script>
+    </body>
+</html> 
