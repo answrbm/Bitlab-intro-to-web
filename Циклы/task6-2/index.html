@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt());
+        let arr = new Array();
+        let max = 0;
+        for(let i = 0; i < 5; i++) {
+            let number = parseInt(prompt());
+            arr.push(number);
+            if(number >= max) max = number;
+        }
+        alert(max);
+    </script> 
+</body>
+</html>

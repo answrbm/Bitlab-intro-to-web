@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        books = [
+            {"name":"Harry Potter and the Philosopher's Stone", "author": "Joanne Rowling", "isbn" : "1233123", "price" : "50$"},
+            {"name":"Harry Potter and the Chamber of Secrets", "author": "Joanne Rowling", "isbn" : "222332", "price" : "40$"},
+            {"name":"Harry Potter and the Prisoner of Azkaban", "author": "Joanne Rowling", "isbn" : "452323", "price" : "30$"}
+                ];
+
+            let author = prompt();
+
+            for(var i=0;i<books.length;i++){
+                if(books[i]["author"] == author) {
+                    let text = "";
+                    for(let j=0; j<books[i].length; j++) {
+                        if(j < books[i].length-1) text += books[i][j] + " - ";
+                        else text += books[i][j];
+                    }
+                    alert(text);
+                }
+            }
+            
+    </script> 
+</body>
+</html>

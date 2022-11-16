@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt());
+        let arr = new Array();
+        let sum = 0;
+        let average = 0;
+        for(let i = 0; i < a; i++) {
+            let number = parseInt(prompt());
+            arr.push(number);
+            sum += number;
+        }
+        alert(sum + " " + (sum/a));
+    </script> 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        users = [
+            {"login":"ilyas", "password": "qwerty"},
+            {"login":"eldar", "password": "qqqqq"},
+            {"login":"assylkhan", "password": "qweqwe"},
+            {"login":"anel", "password": "asdasd"},
+            {"login":"alibek", "password": "aaaaaa"}
+                ];
+
+            let login = prompt();
+            let password = prompt();
+
+            let isLogin = false;
+            let isPassword = false;
+            for(var i=0;i<users.length;i++){
+                if(users[i]["login"] == login && users[i]["password"] == password) {
+                    isLogin = true;
+                    isPassword = true;
+                    break;
+                }
+            } 
+
+            if(isLogin && isPassword) alert("Welcome, you are authenticated");
+            else alert("User not found");
+            
+    </script> 
+</body>
+</html>
