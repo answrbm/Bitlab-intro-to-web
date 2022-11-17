@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number;
+        let arr = new Array();
+        let mult = 1;
+        while(number != 0) {
+            number = prompt("enter a value:");
+            if(number != 0) {
+                arr.push(number);
+                mult *= number;
+            }
+        }
+        console.log(Math.pow(mult, 1/arr.length).toFixed(3));
+    </script>
+</body>
+</html>

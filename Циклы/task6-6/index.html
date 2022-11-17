@@ -13,17 +13,13 @@
 
             let author = prompt();
 
-            for(var i=0;i<books.length;i++){
+            for(var i=0;i<books.length;i++) {
                 if(books[i]["author"] == author) {
-                    let text = "";
-                    for(let j=0; j<books[i].length; j++) {
-                        if(j < books[i].length-1) text += books[i][j] + " - ";
-                        else text += books[i][j];
-                    }
+                    let text = books[i].name + " - " + books[i].author + " - " + books[i].isbn + " - " + books[i].price;
                     alert(text);
                 }
             }
-            
+
     </script> 
 </body>
 </html>

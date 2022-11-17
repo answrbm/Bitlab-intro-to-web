@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = [
+            {"name" : "Ansar", "surname" : "Bektassov", "gpa" : 2.5},
+            {"name" : "Mark", "surname" : "Smith", "gpa" : 3.5}
+        ];
+
+        let choice;
+        while(choice != 0) {
+            choice = prompt("PRESS 1 TO ADD STUDENT\nPRESS 2 TO LIST STUDENT\nPRESS 0 TO EXIT");
+            if(choice == 1) {
+                let name = prompt("INSERT NAME:");
+                let surname = prompt("INSERT SURNAME:");
+                let gpa = prompt("INSERT GPA:");
+                
+                let student = new Object();
+                student.name = name;
+                student.surname = surname;
+                student.gpa = gpa;
+                students.push(student);
+            }
+            if(choice == 2) {
+                for(let i = 0; i < students.length; i++) {
+                    alert(students[i].name + " - " + students[i].surname + " - " 
+                        + students[i].gpa);
+                }
+            }
+        }   
+
+    </script>
+</body>
+</html>

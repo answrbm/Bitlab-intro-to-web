@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Enter n:");
+
+        let arr = new Array();
+        for(let i = 0; i < n; i++) {
+            arr.push(prompt("Enter array value:"));
+        }
+
+        let m = prompt("Enter m:");
+        let index = arr.indexOf(m);
+        if(index != -1) {
+            console.log("YES " + index);
+        } else {
+            console.log("NO");
+        }
+    </script>
+</body>
+</html>

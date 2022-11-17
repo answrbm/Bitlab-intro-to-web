@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        cars = [
+            {"name" : "Mercedes", "year" : 2015, "engineVolume" : "2.4 liters", "price" : "12000000 KZT"},
+            {"name" : "Toyota", "year" : 2011, "engineVolume" : "2.4 liters", "price" : "12000000 KZT"},
+            {"name" : "BMW", "year" : 2012, "engineVolume" : "2.2 liters", "price" : "9000000 KZT"},
+            {"name" : "Lexus", "year" : 2015, "engineVolume" : "3.0 liters", "price" : "7000000 KZT"},
+            {"name" : "Mercedes", "year" : 2018, "engineVolume" : "3.0 liters", "price" : "20000000 KZT"},
+            {"name" : "Mercedes", "year" : 2015, "engineVolume" : "2.4 liters", "price" : "12000000 KZT"},
+        ];
+
+        let choice;
+        while(choice != 5) {
+            choice = prompt("INSERT [1] TO SEARCH BY NAME\nINSERT [2] TO SEARCH BY YEAR\nINSERT [3] TO SEARCH BY ENGINE VOLUME\nINSERT [4] TO SEARCH BY PRICE\nINSERT [5] TO EXIT");
+            if(choice == 1) {
+                let name = prompt("INSERT NAME OF CAR:");
+                for(let i = 0; i < cars.length; i++) {
+                    if(cars[i].name == name) {
+                        alert(cars[i].name + " - " + cars[i].year + " - " 
+                        + cars[i].engineVolume + " - " + cars[i].price);
+                    }
+                }
+            }
+            if(choice == 2) {
+                let yearStart = prompt("INSERT YEAR START FROM:");
+                let yearEnd = prompt("INSERT YEAR ENDS FROM:");
+                for(let i = 0; i < cars.length; i++) {
+                    if(cars[i].year >= yearStart && cars[i].year <= yearEnd) {
+                        alert(cars[i].name + " - " + cars[i].year + " - " 
+                        + cars[i].engineVolume + " - " + cars[i].price);
+                    }
+                }
+            }
+            if(choice == 3) {
+                let engineStart = prompt("INSERT ENGINE VOLUME START FROM:");
+                let engineEnd = prompt("INSERT ENGINE VOLUME ENDS FROM:");
+                for(let i = 0; i < cars.length; i++) {
+                    if(cars[i].engineVolume >= engineStart && cars[i].engineVolume <= engineEnd) {
+                        alert(cars[i].name + " - " + cars[i].year + " - " 
+                        + cars[i].engineVolume + " - " + cars[i].price);
+                    }
+                }
+            }
+            if(choice == 4) {
+                let priceStart = prompt("INSERT PRICE START FROM:");
+                let priceEnd = prompt("INSERT PRICE ENDS FROM:");
+                for(let i = 0; i < cars.length; i++) {
+                    if(cars[i].price >= priceStart && cars[i].price <= priceEnd) {
+                        alert(cars[i].name + " - " + cars[i].year + " - " 
+                        + cars[i].engineVolume + " - " + cars[i].price);
+                    }
+                }
+            }
+        }   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("enter n:");
+        let arr = new Array();
+        let mult = 1;
+        for(let i = 0; i < n; i++) {
+            let number = prompt("enter elem:");
+            arr.push(number);
+            if(number > 0) mult *= number;
+        }
+        console.log(mult);
+    </script>
+</body>
+</html>
