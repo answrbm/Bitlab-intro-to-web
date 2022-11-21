@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="text">What degree developer you are:</h3>
+    <form id="firstForm">
+        <input type="radio" value="junior"/>Junior Developer
+        <input type="radio" value="middle" checked/>Middle Developer
+        <input type="radio" value="senior"/>Senior Developer
+    </form>
+
+    <h3 class="text">Fill below:</h3>
+    <form id="secondForm">
+        Name: <input type="text"/>
+        Surname: <input type="text"/>
+    </form>
+
+    <p class="text">Thank you for attention!</p>
+    <script>
+        // let inputs = document.getElementsByTagName("input");
+        // let inputs = firstForm.getElementsByTagName("input");
+        // for(let inp of inputs) {
+        //     console.log(inp.value + " " + inp.checked);
+        // }
+
+        let texts = document.getElementsByClassName("text");
+        for(let text of texts) {
+            console.log(text.innerText);
+        }
+    </script>
+</body>
+</html>

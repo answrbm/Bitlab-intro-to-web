@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+
+        div {
+            text-align: center;
+        }
+
+        #mainImage {
+            width: 500px;
+            height: 300px;
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+        }
+
+        #buttons div {
+            margin: 0 2%;
+        }
+
+        #buttons img {
+            width: 100px;
+            height: 100px;
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <img src="1.jpg" id="mainImage"/>
+    </div>
+    <div id="buttons"></div>
+    <script>
+        let images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
+
+        for(let image of images) {
+            let divElem = document.createElement('div');
+            divElem.innerHTML = "<img src=" + "'"+ image + "'" + "/>";
+            buttons.append(divElem);
+        }
+
+        buttons.addEventListener('click',setImage);
+
+        function setImage(event) {
+            let target = event.target;
+            if(target.tagName == 'img'.toUpperCase()) mainImage.src = target.src;
+        };
+    </script>
+</body>
+</html>

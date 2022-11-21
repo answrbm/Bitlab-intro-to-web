@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+
+        div {
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+        }
+
+        .buttons > :first-child {
+            margin-right: 0.4%;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            background-color: black;
+            padding: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+        
+        button:active {
+            background-color: gray;
+        }
+
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="1.jpg" id="mainImage"/>
+    </div>
+    <div class="buttons">
+        <div><button id="back">&#60; BACK</button></div>
+        <div><button id="next">NEXT &#62;</button></div>
+    </div>
+    <script>
+        let images = ["1.jpg","2.jpg","3.jpg"];
+        
+        let index = 0;
+        function backFun() {
+            if(index > 0) {
+                mainImage.src = images[--index];
+            } else {
+                index = images.length-1;
+                mainImage.src = images[index];
+            }
+        }
+
+        function nextFun() {
+            if(index < images.length-1) {
+                mainImage.src = images[++index];
+            } else {
+                index = 0; 
+                mainImage.src = images[index];
+            }
+        }
+
+        back.addEventListener('click',backFun);
+        next.addEventListener('click',nextFun);
+    </script>
+</body>
+</html>

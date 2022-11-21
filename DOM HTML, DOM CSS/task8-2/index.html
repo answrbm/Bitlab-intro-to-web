@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .back-red {
+            border-color: red;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        body > :first-child {
+            margin-right: 2%;
+        }
+
+        body > :nth-child(3) {
+            padding-left: 2%;
+        }
+
+        button {
+            padding: 1px 20px;
+            color: white;
+            font-weight: bold;
+            background-color: blue;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: lightblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div><button id="increaseButton">+</button></div>
+    <div id="numberValue">0</div>
+    <div><button id="decreaseButton">-</button></div>
+    <script>
+
+        function increase() {
+            let value = parseInt(numberValue.innerText);
+            numberValue.innerText = value + 1; 
+        }
+
+        function decrease() {
+            let value = parseInt(numberValue.innerText);
+            numberValue.innerText = value - 1; 
+        }
+
+        increaseButton.addEventListener('click',increase);
+        decreaseButton.addEventListener('click',decrease);
+
+        
+
+    </script>
+</body>
+</html>

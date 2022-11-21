@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">Введите сумму</td>
+            <td>KZT (tenge)</td>
+            <td>USD (dollar)</td>
+            <td>EUR (euro)</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="entered"></td>
+            <td>
+                <select id="currencies">
+                    <option>KZT</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" id="kzt">
+            </td>
+            <td> 
+                <input type="text" id="usd">
+            </td>
+            <td>
+                <input type="text" id="eur">
+            </td>
+        </tr>
+    </table>
+    <script>
+
+        let e = document.getElementById("currencies");
+        e.addEventListener('click', convert);
+
+        entered.oninput = convert;
+
+        function convert() {
+            let selectedCurren = e.options[e.selectedIndex].text;
+
+            if(selectedCurren == 'KZT') { 
+                kzt.value = "-";
+                usd.value = (entered.value / 431).toFixed(2);
+                eur.value = (entered.value / 509).toFixed(2); 
+            }
+            if(selectedCurren == 'USD') {
+                usd.value = "-";
+                kzt.value = 429 * entered.value;
+                eur.value = (kzt.value / 509).toFixed(2); 
+            }
+            if(selectedCurren == 'EUR') {
+                eur.value = "-";
+                kzt.value = 429 * entered.value;
+                usd.value = (kzt.value / 431).toFixed(2); 
+            }
+        }
+
+        
+    
+        
+    </script>
+</body>
+</html>

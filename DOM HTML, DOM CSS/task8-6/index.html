@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>Email:</div>
+    <input type="text" id="email"/>
+    <div>Password:</div>
+    <input type="password" id="password"/>
+    <div>Retype password:</div>
+    <input type="password" id="passConf"/>
+    <div><button id="button">REGISTER</button></div>
+    <script>
+        let button = document.getElementById('button');
+
+        let emails = ["ansar.bektassov@mail.com","bektasovansar@gmail.com","1"];
+
+        
+        let emailWarned = false;
+        let passWarned = false;
+        let pcWarned = false;   
+
+        function registration() {
+            let m = email.value;
+            let p = password.value;
+            let pc = passConf.value;
+
+            let isValid = true;    
+
+            if(emails.includes(m)) {
+                let elem = document.createElement('div');
+                elem.classList.add('red');
+                elem.classList.add('emailWarn');
+                elem.innerText = 'Current email is already in use';
+                if(!emailWarned) {
+                    email.after(elem);
+                    emailWarned = true;
+                }
+                isValid = false;
+            } else {
+                if(emailWarned) { 
+                    let emailElem = document.getElementsByClassName('emailWarn');
+                    emailElem[0].remove();
+                    emailWarned = false;
+                }
+            }
+            if(p.length < 6) {
+                let elem = document.createElement('div');
+                elem.classList.add('red');
+                elem.classList.add('passWarn');      
+                elem.innerText = 'Password length at least must be 6 symbols';
+                if(!passWarned) { 
+                    password.after(elem);
+                    passWarned = true;
+                }
+                isValid = false;
+            } else {
+                if(passWarned) { 
+                    let passElem = document.getElementsByClassName('passWarn');
+                    passElem[0].remove();
+                    passWarned = false;
+                }
+            }
+            if(p != pc) { 
+                let elem = document.createElement('div');
+                elem.classList.add('red'); 
+                elem.classList.add('pcWarn');
+                elem.innerText = 'Passwords are not the same';
+                if(!pcWarned) { 
+                    passConf.after(elem);
+                    pcWarned = true;
+                }
+                isValid = false;
+            } else {
+                if(pcWarned) { 
+                    let pcElem = document.getElementsByClassName('pcWarn');
+                    pcElem[0].remove();
+                    pcWarned = false;
+                }
+            }
+            if(isValid) alert("Succesfull registration!");
+        }
+
+        button.addEventListener('click',registration);
+    </script>
+</body>
+</html>
