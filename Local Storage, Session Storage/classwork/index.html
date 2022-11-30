@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //HOW TO PARSE INTO JSON
+
+        // let student = {
+        //     name: 'Adam',
+        //     age: 20,
+        //     gpa: 3.78
+        // };
+
+        // let users = [
+        //     {name:'Ansar',login: 'answr',password: '123'},
+        //     {name:'Adam',login: 'adamsmith',password: '1234'},
+        //     {name:'Mark',login: 'marksmith',password: '12345'},
+        // ];
+
+        // let jsonStudent = JSON.stringify(student);
+        // let jsonUsers = JSON.stringify(users);
+        // console.log('JSON student: ' + jsonStudent);
+        // console.log('JSON users: ' + jsonUsers);
+
+        //*****************************
+        //HOW TO PARSE FROM JSON TO OBJECT
+
+        // let json = '{"name":"Adam","age":20,"gpa":3.78}';
+        
+        // let obj = JSON.parse(json);
+        // console.log(obj);
+
+        //*****************************
+
+        //PUT JSON object in Local Storage
+
+        let obj = {id: 1, name: 'Ansar'};
+
+        let jsonObject = JSON.stringify(obj);
+        localStorage.user = jsonObject;
+
+        let jsonObj = localStorage.user;
+        let user = JSON.parse(jsonObject);
+        console.log(user.name);
+    </script>
+</body>
+</html>

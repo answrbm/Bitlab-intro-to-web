@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let items = JSON.parse(localStorage.getItem('items'));
+        let tableElem = document.createElement('table');
+
+        function fullContent() {
+            tableElem.classList.add('tableElem');
+            let stableElems = `<tr>
+                                    <td>NAME</td>
+                                    <td>PRICE</td>
+                                    <td>REMOVE</td>
+                                </tr>`;
+            tableElem.innerHTML = stableElems;                    
+            let elems = [];
+        
+            if(items != null) {
+                if(items.length != 0) {
+                    let count = 1;
+                    for(let item of items) {
+                        let elem = document.createElement('tr');
+                        elem.innerHTML = `<td>${item.name}</td><td>${item.price}</td><td><button class='remove' data-name='${item.name}'>REMOVE</button></td>`;
+                        elems.push(elem);    
+                    }
+
+                    for(let elem of elems)
+                        tableElem.append(elem);
+                } else {
+                    let emptyTableelem = document.createElement('td');
+                    emptyTableelem.colSpan = 3;
+                    emptyTableelem.innerText = 'Basket is empty';
+                    tableElem.append(emptyTableelem);
+                }
+            }
+            document.body.append(tableElem);
+        }
+        fullContent();
+
+        tableElem.onclick = function(e) {
+            if(e.target && e.target.classList.contains('remove')) {
+                console.log(e.target.dataset.name);
+                removeItems(e.target.dataset.name);
+            }
+        };
+
+        function removeItems(dataName) {
+            for(let i = 0; i < items.length; i++) {
+                console.log(items[i].name == dataName);
+                if(items[i].name == dataName) {
+                    items.splice(i,1);
+                    localStorage.items = JSON.stringify(items);
+                    fullContent();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

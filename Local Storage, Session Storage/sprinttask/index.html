@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">TWITTER</div>
+        <div class="buttons">
+            <div><a href="">Tweets</a></div>
+            <div><a href="sign.html">Login</a></div>
+            <div><a href="index.html">Register</a></div>
+        </div>
+    </div>
+    <form>
+        <div>EMAIL:</div>
+        <div><input id="email" type="text"></div>
+        <div>PASSWORD:</div>
+        <div></div><input id="password" type="password">
+        <div>FULL NAME:</div>
+        <div></div><input id="fullName" type="text">
+        <div>COUNTRY:</div>
+        <div>
+            <select id="country">
+                <option>KAZAKHSTAN</option>
+                <option>JAPAN</option>
+                <option>USA</option>
+                <option>INDIA</option>
+            </select>
+        </div>
+        <div>BIRTHDATE:</div>
+        <div><input id="birthdate" type="date"></div>
+        <div><button id="register">REGISTER</button></div>
+    </form>
+    <script>
+
+        function addUser() {
+
+            let e = email.value;
+            let p = password.value;
+            let f = fullName.value;
+            let c = country.value;
+            let b = birthdate.value;
+            console.log(e);
+            console.log(p);
+            console.log(f);
+            console.log(c);
+            console.log(b);
+
+            let user = {};
+            user.email = e;
+            user.password = p;
+            user.fullName = f;
+            user.country = c;
+            user.birthdate = b;
+
+            let users;
+            if(localStorage.length > 0) {
+                users = JSON.parse(localStorage.getItem('users'));
+                users.push(user);
+            } else {
+                users = [user];
+            }
+            let jsonUsers = JSON.stringify(users);
+            localStorage.users = jsonUsers;
+        }
+
+        register.addEventListener('click',addUser);
+
+    </script>
+</body>
+</html>

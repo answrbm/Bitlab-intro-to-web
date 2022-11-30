@@ -1,0 +1,44 @@
+body {
+    width: 70%;
+    margin: auto;
+}
+
+.header {
+    background-color: lightseagreen;
+    color:white;
+    display: flex;
+    height: 50px;
+}
+
+.header > div {
+    margin: auto 0;
+}
+
+.header > .logo {
+    margin-left: 1%;
+}
+
+.header > .buttons {
+    margin-left: 73%;
+}
+
+.header > .buttons {
+    display: flex;
+}
+
+.header > .buttons > div {
+    margin-left: 10%;
+}
+
+form {
+    margin: 0 40%;
+}
+
+form > * {
+    margin-top: 5%;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
