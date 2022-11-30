@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>NAME:</td>
+            <td><input type="text" id="firstname"></td>
+        </tr>
+        <tr>
+            <td>SURNAME:</td>
+            <td><input type="text" id="surname"></td>
+        </tr>
+        <tr>
+            <td>COUNTRY:</td>
+            <td>
+                <select id="country">
+                    <option>Kazakhstan</option>
+                    <option>Japan</option>
+                    <option>Spain</option>
+                    <option>France</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>PHONE NUMBER:</td>
+            <td><input type="text" id="phoneNumber"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button>REGISTER</button>
+                <button id="saveButton">SAVE TO DRAFT</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+
+        if(localStorage.length > 0) {
+            let parsedJson = JSON.parse(localStorage.getItem('draft'));
+
+            firstname.value = parsedJson.name;
+            surname.value = parsedJson.surname;
+            document.getElementById("country").value = parsedJson.country;
+            phoneNumber.value = parsedJson.phoneNumber;
+        }
+
+        function save() {
+            let n = firstname.value;
+            console.log(n);
+            let sn = surname.value;
+            console.log(sn);
+            let c = document.getElementById("country").value;
+            let pn = phoneNumber.value;
+
+            let data = {name : n, surname : sn, country : c, phoneNumber : pn};
+            let jsonData = JSON.stringify(data);
+            localStorage.draft = jsonData;
+        }
+
+        saveButton.addEventListener('click',save);
+    </script>
+</body>
+</html>
